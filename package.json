@@ -1,0 +1,25 @@
+{
+  "name": "status-rt",
+  "version": "1.0.0",
+  "description": "todo",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucas-rds/status-rt.git"
+  },
+  "author": "Lucas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucas-rds/status-rt/issues"
+  },
+  "homepage": "https://github.com/lucas-rds/status-rt#readme",
+  "dependencies": {
+    "ws": "^3.0.0"
+  }
+}

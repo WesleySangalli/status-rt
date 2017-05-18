@@ -1,0 +1,19 @@
+{
+  "name": "status-rt",
+  "homepage": "https://github.com/lucas-rds/status-rt",
+  "description": "todo",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jasmine-core": "jasmine#^2.6.1",
+    "bootstrap": "^3.3.7"
+  }
+}
