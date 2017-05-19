@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
     <script type="text/javascript" src="app/models/StatusSocket.js"></script>
+    <script type="text/javascript" src="app/view/StatusView.js"></script>
+    <script type="text/javascript" src="app/controller/StatusController.js"></script>
 </head>
 <body>
     <div class="container">
@@ -15,20 +17,14 @@
                     <h3>Temperatura</h3> 
                     <span class="value">0</span>
                 </div>
-                <div class=" bg-primary col-lg-6 " id="humidity"> 
+                <div class=" bg-primary col-lg-6 "> 
                     <h3>Umidade</h3>
-                    <span class="value ">0</span>
+                    <span class="value" id="humidity">0</span>
                 </div>
 
-                <!-- <button onclick="socket.send('a')">Enviar mensagem</button> -->
+                <button onclick="humidityView.updateValue()">Enviar mensagem</button>
             </div>
         </div>
     </div>
 </body>
-<script type="text/javascript">
-    let socket = StatusSocket('ws://localhost:8080');
-    // console.log(socket);
-    // socket.send('Hello')
-
-</script>
 </html>
