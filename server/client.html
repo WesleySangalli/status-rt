@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>WebSocket Client</title>		
+	</head>
+	<body>
+		Message: <input type="text" id="fmessage"><br>
+		<button onclick="sendMessage()">Enviar</button>	
+		<div id="response"></div>
+		<script type="text/javascript">
+			var websocket;      
+			function connect(){         
+				console.log('Connecting with websocket');
+				websocket = new WebSocket("ws://localhost:8980/status/");	
+			    websocket.onmessage = onMessage;
+			}
+			
+			function sendMessage(){    
+				var message = document.getElementById('fmessage').value;
+				console.log('Sending ... ' + message);			
+				websocket.send(message);
+			}
+					
+			function onMessage(evt) {
+				document.getElementById('response').innerHTML = evt.data;
+			};
+			
+			window.addEventListener("load", connect, false);			
+		</script>		
+	</body>
+</html>
