@@ -9,12 +9,21 @@ import org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainer
 
 public class App {
 
-	private static final int port = 8980;
+	private int port = 8980;
 
 	public static void main(String[] args) throws Exception {
+		System.out.println("Starting application...");
+
 		App app = new App();
+
+		if (System.getProperty("server.bind.port") != null && System.getProperty("server.bind.port").length() > 0) {
+			app.port = Integer.parseInt(System.getProperty("server.bind.port"));
+			System.out.println("Got port from env " + app.port);
+		} else {
+			System.out.println("No port set using default " + app.port);
+		}
 		app.startSimpleEchoServer();
-		//app.startWebSocketServer();
+		// app.startWebSocketServer();
 	}
 
 	private void startWebSocketServer() throws Exception {
