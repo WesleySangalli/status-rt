@@ -13,8 +13,8 @@ public class App {
 
 	public static void main(String[] args) throws Exception {
 		App app = new App();
-//		app.startSimpleEchoServer();
-		app.startWebSocketServer();
+		app.startSimpleEchoServer();
+		//app.startWebSocketServer();
 	}
 
 	private void startWebSocketServer() throws Exception {
