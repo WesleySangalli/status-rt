@@ -1,0 +1,1 @@
+web: java -Dserver.bind.port=$PORT -jar target/status-rt-server-0.1-SNAPSHOT.jar
