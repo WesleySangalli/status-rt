@@ -9,7 +9,7 @@ import org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainer
 
 public class App {
 
-	private static final int port = 8080;
+	private static final int port = 8980;
 
 	public static void main(String[] args) throws Exception {
 		App app = new App();
