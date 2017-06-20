@@ -22,8 +22,8 @@ public class App {
 		} else {
 			System.out.println("No port set using default " + app.port);
 		}
-		app.startSimpleEchoServer();
-		// app.startWebSocketServer();
+		//app.startSimpleEchoServer();
+		app.startWebSocketServer();
 	}
 
 	private void startWebSocketServer() throws Exception {
